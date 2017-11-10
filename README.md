@@ -1,6 +1,21 @@
 # ejs-red-spotify
 Node red Spotify nodes
 
+An experiment creating nodes to interact with Spotify
+
+# TODO
+1. Write help docs for nodes.
+2. Implement refresh token
+3. Store auth tokens in some way
+4. implement more of the api. Search, specific track.
+
+# Requirements
+
+Currently the Spotify API requires that you have a Paid account to interact with most of the cool/fun api calls.
+
+Pretty sure you also need an externally accessible node red domain for the auth callback,
+
+
 # NPM install
 ``` 
 npm install ejs-red-spotify --save
