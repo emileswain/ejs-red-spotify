@@ -17,6 +17,9 @@ Pretty sure you also need an externally accessible node red domain for the auth 
 
 
 # NPM install
+
+https://www.npmjs.com/package/ejs-red-spotify
+
 ``` 
 npm install ejs-red-spotify --save
 ```
