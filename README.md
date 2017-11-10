@@ -1,6 +1,10 @@
 # ejs-red-spotify
 Node red Spotify nodes
 
+# NPM install
+``` 
+npm install ejs-red-spotify --save
+```
 
 # Flow
 
