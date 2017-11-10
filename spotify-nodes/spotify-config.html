@@ -1,0 +1,41 @@
+<script type="text/javascript">
+    RED.nodes.registerType('spotify-config',{
+        category: 'config',
+        color: '#00D56B',
+        defaults: {
+            name: {value:""},
+            redirect_uri : {value:""},
+            client_id : {type:"text"},
+            client_secret : {type:"text"}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "spotify_bw.png",
+        label: function() {
+            return this.name||"spotify-config";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="spotify-config">
+    <div class="form-row">
+        <label for="node-config-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-config-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-client_id"><i class="icon-tag"></i> Client ID</label>
+        <input type="text" id="node-config-input-client_id" placeholder="<client id>">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-client_secret"><i class="icon-tag"></i> Client Secret</label>
+        <input type="text" id="node-config-input-client_secret" placeholder="<client secret>">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-redirect_uri"><i class="icon-tag"></i> Redirect uri</label>
+        <input type="text" id="node-config-input-redirect_uri" placeholder="/spotify/callback">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="spotify-config">
+    <p>Manage Spotify app credentials.</p>
+</script>

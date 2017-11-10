@@ -1,0 +1,62 @@
+<script type="text/javascript">
+    RED.nodes.registerType('spotify-api', {
+        category: 'Spotify',
+        color: '#00D56B',
+        defaults: {
+            name: {value: ""},
+            action: {value: ""}
+        },
+        credentials: {},
+        inputs: 1,
+        outputs: 1,
+        icon: "spotify_bw.png",
+        label: function () {
+            return (this.name || "spotify-api" ) + (this.action ? "-"+this.action : "none" );
+        },
+        oneditsave: function() {
+            var selectField = $('.node-input-rule-action');
+            var node = this;
+            node.action = selectField.val();
+            node.name = "Spotify-api-"+node.action;
+        },
+        oneditprepare: function ()
+        {
+            var selectField = $('.node-input-rule-action');
+            var value = this.action;
+            var operators = ['play','pause','next','previous','currentlyPlaying', 'search', 'track'];
+            for (var d in operators) {
+                //console.log(d + " == "+ operators[d]  + "   ==== "+ value);
+                var selected = operators[d] == value ? 'selected' : null;
+                selectField.append($("<option " + (selected ? "selected='"+selected+"' " : "" )+ "></option>").val(operators[d]).text(operators[d]));
+            }
+        }
+
+    });
+</script>
+
+<script type="text/x-red" data-template-name="spotify-api">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <select class='node-input-rule-action' />
+    </div>
+
+
+    </select>
+    <div class="form-tips"><b>Tip:</b> This is here to help.</div>
+
+</script>
+
+<script type="text/x-red" data-help-name="spotify-api">
+   <p>Some useful help text to introduce the node.</p>
+   <h3>Outputs</h3>
+       <dl class="message-properties">
+       <dt>payload
+           <span class="property-type">string | buffer</span>
+       </dt>
+   <h3>Details</h3>
+   <p>Some more information about the node.</p>
+
+</script>

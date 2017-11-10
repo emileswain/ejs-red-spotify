@@ -1,0 +1,16 @@
+{
+  "name"         : "ejs-red-spotify",
+  "version"      : "0.0.1",
+  "description"  : "Spotify nodes",
+  "dependencies": {
+  },
+  "node-red" : {
+    "nodes": {
+      "spotify-api": "spotify-nodes/spotify-api.js",
+      "spotify-authorise": "spotify-nodes/spotify-authorise.js",
+      "spotify-callback": "spotify-nodes/spotify-callback.js",
+      "spotify-config": "spotify-nodes/spotify-config.js",
+      "spotify-scope": "spotify-nodes/spotify-scope.js"
+    }
+  }
+}
