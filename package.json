@@ -2,6 +2,10 @@
   "name"         : "ejs-red-spotify",
   "version"      : "0.0.1",
   "description"  : "Spotify nodes",
+  "repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/emileswain/ejs-red-spotify.git"
+  }
   "dependencies": {
   },
   "node-red" : {
