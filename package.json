@@ -1,14 +1,13 @@
 {
-  "name"         : "ejs-red-spotify",
-  "version"      : "0.0.1",
-  "description"  : "Spotify nodes",
-  "repository" :
-  { "type" : "git"
-  , "url" : "https://github.com/emileswain/ejs-red-spotify.git"
+  "name": "ejs-red-spotify",
+  "version": "0.0.2",
+  "description": "Spotify nodes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emileswain/ejs-red-spotify.git"
   },
-  "dependencies": {
-  },
-  "node-red" : {
+  "dependencies": {},
+  "node-red": {
     "nodes": {
       "spotify-api": "spotify-nodes/spotify-api.js",
       "spotify-authorise": "spotify-nodes/spotify-authorise.js",
